@@ -189,5 +189,5 @@ MasterCook/
 ## 👨‍💻 Autor y Contacto
 
 Proyecto desarrollado como demostración técnica full-stack y arquitectura de microservicios.  
-- **Desarrollador:** Ishai FL
+- **Desarrollador:** Hector Flores
 - **Tecnologías:** React, Python/Flask, Microservicios, Docker, SQL
