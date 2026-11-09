@@ -1,0 +1,7 @@
+flask
+flask-cors
+flask_sqlalchemy
+python-dotenv
+python-dotenv
+pymysql
+mysql-connector-python
