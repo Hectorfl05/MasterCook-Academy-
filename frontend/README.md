@@ -1,74 +1,42 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# 🖥️ MasterCook Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación Single Page Application (SPA) desarrollada en **React 19** con **React Router v6** para la plataforma **MasterCook Academy**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Inicio Rápido
 
-### `npm start`
+### 1. Instalar dependencias
+```bash
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Configuración de Variables de Entorno
+Por defecto, el frontend se conecta a los microservicios locales en los puertos `5001-5004` definidos en `.env`. Puedes consultar `.env.example` para configurar endpoints remotos (Cloud Run).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```env
+REACT_APP_AUTH_URL=http://localhost:5001
+REACT_APP_TALLERES_URL=http://localhost:5002
+REACT_APP_RESERVAS_URL=http://localhost:5003
+REACT_APP_PAGOS_URL=http://localhost:5004
+```
 
-### `npm test`
+### 3. Ejecutar en desarrollo
+```bash
+npm start
+```
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. Ejecutar Pruebas Automatizadas
+```bash
+npm test -- --watchAll=false
+```
 
-### `npm run build`
+### 5. Compilar para Producción
+```bash
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Proyecto_ADS
->>>>>>> 49cd484441307bc2f7ab04b8e5f97f007e42e7a7
+Para consultar la arquitectura general, microservicios backend e instrucciones completas del sistema, consulta el [README principal en la raíz](../README.md).
