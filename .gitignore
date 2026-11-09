@@ -1,0 +1,69 @@
+# ==========================================
+# Entornos virtuales y dependencias Python
+# ==========================================
+.venv/
+backend/.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Byte-compiled / optimizados
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Bases de datos locales
+*.db
+*.sqlite
+*.sqlite3
+backend/mastercook.db
+
+# ==========================================
+# Dependencias y compilados Node.js / React
+# ==========================================
+node_modules/
+frontend/node_modules/
+frontend/build/
+build/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+*.log
+
+# Cobertura de pruebas
+coverage/
+.nyc_output/
+
+# ==========================================
+# Variables de entorno y secretos
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/*/.env
+backend/.env
+# Nota: se conservan los .env.example para referencia del equipo
+
+# ==========================================
+# IDEs y Editores del sistema
+# ==========================================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+.DS_Store
+Thumbs.db

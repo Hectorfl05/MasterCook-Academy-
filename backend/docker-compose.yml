@@ -1,0 +1,62 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mastercook-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mastercook
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpassword"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  auth:
+    build: ./auth
+    ports:
+      - "5001:5000"
+    environment:
+      - DATABASE_URI=mysql+mysqlconnector://root:rootpassword@db:3306/mastercook
+      - SECRET_KEY=mastercook-dev-secret-key-12345
+    depends_on:
+      db:
+        condition: service_healthy
+
+  talleres:
+    build: ./talleres
+    ports:
+      - "5002:5000"
+    environment:
+      - DATABASE_URI=mysql+mysqlconnector://root:rootpassword@db:3306/mastercook
+    depends_on:
+      db:
+        condition: service_healthy
+
+  reservas:
+    build: ./reservas
+    ports:
+      - "5003:5000"
+    environment:
+      - DATABASE_URI=mysql+mysqlconnector://root:rootpassword@db:3306/mastercook
+      - SECRET_KEY=mastercook-dev-secret-key-12345
+    depends_on:
+      db:
+        condition: service_healthy
+
+  pagos:
+    build: ./pagos
+    ports:
+      - "5004:5000"
+    environment:
+      - DATABASE_URI=mysql+mysqlconnector://root:rootpassword@db:3306/mastercook
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  mysql_data:
